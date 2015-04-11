@@ -11,12 +11,14 @@ class ConsoleHandler implements HourHandler {
 public class Driver1 {
   public static void main(String[] args) { 
     Clock clock = new Clock();
-    clock.addHourHandler(new ConsoleHandler());
+    HourHandler hh = new ConsoleHandler();
+    clock.addHourHandler(hh);
     clock.start();
   }
 }
 class Clock {
   public void addHourHandler(HourHandler hh) {
+    //rudimentary
     hourHandlers.add(hh);
   }
   //PRIVATE
